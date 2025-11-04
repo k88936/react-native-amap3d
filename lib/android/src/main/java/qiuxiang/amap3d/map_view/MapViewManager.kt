@@ -81,6 +81,11 @@ internal class MapViewManager : ViewGroupManager<MapView>() {
     view.map.showBuildings(enabled)
   }
 
+  @ReactProp(name = "labelsEnabled")
+  fun setLabelsEnabled(view: MapView, enabled: Boolean) {
+    view.map.showMapText(enabled)
+  }
+
   @ReactProp(name = "compassEnabled")
   fun setCompassEnabled(view: MapView, show: Boolean) {
     view.map.uiSettings.isCompassEnabled = show
