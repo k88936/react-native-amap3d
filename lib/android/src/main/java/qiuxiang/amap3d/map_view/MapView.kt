@@ -125,14 +125,7 @@ class MapView(context: ThemedReactContext) : TextureMapView(context) {
 
   private val animateCallback = object : AMap.CancelableCallback {
     override fun onCancel() {}
-    override fun onFinish() {
-        val cameraPosition = map.cameraPosition.toJson()
-        val latLngBounds = map.projection.visibleRegion.latLngBounds.toJson()
-        emit(id, "onCameraIdle", Arguments.createMap().apply {
-            putMap("cameraPosition", cameraPosition)
-            putMap("latLngBounds", latLngBounds)
-        })
-    }
+    override fun onFinish() {}
   }
 
   fun moveCamera(args: ReadableArray?) {
