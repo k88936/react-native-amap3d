@@ -32,7 +32,7 @@ class MapView(context: ThemedReactContext) : TextureMapView(context) {
     super.onCreate(null)
 
     locationStyle = MyLocationStyle()
-    locationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATION_ROTATE_NO_CENTER)
+    locationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATE)
     map.myLocationStyle = locationStyle
 
     map.setOnMapLoadedListener { emit(id, "onLoad") }
