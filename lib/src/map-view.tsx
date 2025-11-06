@@ -172,7 +172,7 @@ export default class extends Component<MapViewProps> {
   /**
    * 移动视角
    */
-  moveCamera(cameraPosition: CameraPosition, duration = 0) {
+  moveCamera(cameraPosition: CameraPosition, duration:number) {
     this.invoke("moveCamera", [cameraPosition, duration]);
   }
 
